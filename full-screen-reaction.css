@@ -1,0 +1,27 @@
+@font-face {
+    font-family: hemi;
+    src: url(hemi\ head\ bd\ it.otf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: white;
+}
+#color-change-area{
+    height: 80vh;
+    background-color: rgb(212, 59, 59);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#reaction-time-box{
+    font-size: 50px;
+    text-align: center;
+    font-weight: 900;
+    font-family: hemi;
+    /* visibility: hidden; */
+}
+#reaction-time{
+    visibility: hidden;
+}

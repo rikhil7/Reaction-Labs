@@ -1,0 +1,51 @@
+@font-face {
+    font-family: hemi;
+    src: url(hemi\ head\ bd\ it.otf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: white;
+}
+body{
+    background-image: url(background\ image\ start\ page.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100vw;
+}
+#game-arena{
+    width: 1000px;
+    height: 500px;
+    background: rgba( 255, 255, 255, 0.1 );
+    /* box-shadow: 0 8px 32px 0 rgba( 255, 255, 255, 0.37 ); */
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#parent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    width: 100vw;
+    height: 100vh;
+}
+#heading{
+    font-size: 50px;
+    font-family: hemi;
+    text-decoration: underline;
+}
+#circle{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 2%;
+    left: 90%;
+}
