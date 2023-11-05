@@ -13,6 +13,8 @@ let z
 let r
 let t1
 let randomColor
+let bgm = new Audio("full-screen-reaction-bg.mp3")
+bgm.play()
 function startgame(){
     if (clicks==1){
         startGameTime = Date.now()
@@ -35,6 +37,15 @@ function tooSoon(){
     if (clicks>1 && (tooSoonTimeTracker-startGameTime)<randomTimeMS){
         text.textContent = "Clicked too soon!"
         clearTimeout(t1)
+        bgm.pause()
+        document.body.onkeydown = function(e) {
+            if (e.key == " " ||
+                e.code == "Space" ||      
+                e.keyCode == 32      
+            ) {
+                location.reload()
+            }
+          }
     }
 }
 
@@ -62,9 +73,18 @@ document.body.onkeydown = function(e) {
         tooSoon()
         if (clicks==2 && (tooSoonTimeTracker-startGameTime)>randomTimeMS){
             r = Date.now()
+            bgm.pause()
             text.textContent = "Your reaction time:"
             reactTime.textContent = `${r-z}ms`
             reactTime.style.visibility = "visible"
+            document.body.onkeydown = function(e) {
+                if (e.key == " " ||
+                    e.code == "Space" ||      
+                    e.keyCode == 32      
+                ) {
+                    location.reload()
+                }
+              }
         }
     }
   }

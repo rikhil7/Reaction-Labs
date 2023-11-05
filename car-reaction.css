@@ -1,6 +1,6 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     color: white;
 }
@@ -8,20 +8,23 @@
     font-family: hemi;
     src: url(hemi\ head\ bd\ it.otf);
 }
+
 #sky{
     height: 100vh;
     width: 100%;
     background-image: url(sky.jpg);
     background-size: cover;
     background-position: center;
-    overflow-x: hidden;
     position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* visibility: hidden; */
 }
 #road{
-    height: 600px;
+    height: 200px;
     width: 500%;
     display: block;
-    background-image: url(road.png);
+    background-image: url(road.jpg);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -36,20 +39,88 @@
     }
 }
 #buildings{
-    height: 500px;
+    height: 250px;
     width: 500%;
-    background-image: url(buildings.png);
+    background-image: url(city.png);
     position: absolute;
-    bottom: 240px;
+    bottom: 200px;
     left: 0;
     right: 0;
-    background-repeat: repeat-x;
-    z-index: 1;
     display: block;
+    z-index: 1;
+    background-repeat: repeat-x;
     animation: buildings 20s linear infinite;
 }
 @keyframes buildings {
     100%{
         transform: translateX(-1400px);
     }
+}
+#car{
+    width: 400px;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+#car img{
+    width: 100%;
+    animation: car 1s linear infinite;
+}
+@keyframes car{
+    100%{
+        transform: translateY(-1px);
+    }
+    50%{
+        transform: translateY(1px);
+    }
+    0%{
+        transform: translateY(-1px);
+    }
+}
+#wheel{
+    left: 50%;
+    bottom: 178px;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+#wheel img{
+    width: 72px;
+    height: 72px;
+    animation: wheel 1s linear infinite;
+}
+.back{
+    position: absolute;
+    left: -165px;
+}
+.front{
+    position: absolute;
+    left: 80px;
+}
+@keyframes wheel {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#stop{
+    position: absolute;
+    /* top: 20%; */
+    left: 22%;
+    z-index: 3;
+    visibility: hidden;
+}
+#stop img{
+    width: 800px;
+}
+#reaction-time-box{
+    position: absolute;
+    top: 35%;
+    left: 28%;
+    font-size: 60px;
+    color: purple;
+    font-family: hemi;
+    visibility: hidden;
+    z-index: 3;
 }

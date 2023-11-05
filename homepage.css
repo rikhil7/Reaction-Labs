@@ -61,13 +61,13 @@ body{
     font-size: 16px;
     word-spacing: 2px;
 }
-@media (max-width: 600px){
+@media (max-width: 350px){
     #heading{
         font-size: 25px;
     }
     #heading img{
         width: 90px;
         top: -53px;
-        left: 180px;
+        left: 190px;
     }
 }
