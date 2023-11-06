@@ -1,20 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="random-elements.css">
-</head>
-<body>
+    <link rel="stylesheet" href="random-elements.css" />
+  </head>
+  <body>
+    <div id="instructions">
+      <div id="heading">Instructions & Mode Selection</div>
+      <div id="game-des">
+        This game has been developed to help you imporve your reaction time and
+        mouse hovering skills. In this game, random elements will pop up on your
+        screen and you have to click on them as soon as possible. Relevant stats
+        and score would be displayed to you when the game ends. There are three
+        difficulty modes (<span id="highlight">Easy, Medium, Hard</span>) from
+        which you can choose any one to improve your reaction time.
+      </div>
+      <div id="choose-mode-heading">Choose Difficulty Mode</div>
+      <div id="buttons">
+        <button class="easy">Easy</button>
+        <button class="medium">Medium</button>
+        <button class="hard">Hard</button>
+      </div>
+      <div id="choose-mode-heading">Choose Time Duration</div>
+      <div id="buttons">
+        <button class="sec10">10 sec</button>
+        <button class="sec20">20 sec</button>
+        <button class="sec30">30 sec</button>
+      </div>
+      <div id="startBtn">
+            <button>START</button>
+      </div>
+    </div>
     <div id="parent">
-        <div id="heading">Click on elements popping as FAST as you can</div>
-        <div id="game-arena">
-        </div>
-        <div id="reaction-time-box">
-            Reaction time of last click: <span id="reaction-time"></span>
-        </div>
+      <div id="timer">60s</div>
+      <div id="heading">Click on elements popping as FAST as you can</div>
+      <div id="game-arena"></div>
+      <div id="reaction-time-box">
+        Reaction time of last click: <span id="reaction-time"></span>
+      </div>
+    </div>
+    <div id="score">
+        <div id="heading">SCORE</div>
+        <div id="score-box"></div>
     </div>
     <script src="random-elements.js"></script>
-</body>
+  </body>
 </html>

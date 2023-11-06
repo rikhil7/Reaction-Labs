@@ -9,9 +9,7 @@
     color: white;
 }
 body{
-    background-image: url(background\ image\ start\ page.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(45,50,173,1) 35%, rgba(0,212,255,1) 100%);
     height: 100vh;
     width: 100vw;
 }
@@ -34,6 +32,7 @@ body{
     padding-bottom: 30px;
     width: 100vw;
     height: 100vh;
+    visibility: hidden;
 }
 #heading{
     font-size: 50px;
@@ -48,4 +47,100 @@ body{
     position: absolute;
     top: 2%;
     left: 90%;
+}
+#instructions{
+    position: absolute;
+    align-items: center;
+    padding: 0 90px 0 90px;
+    gap: 30px;
+    top: 10%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 80%;
+    background: rgba( 255, 255, 255, 0.05 );
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+    backdrop-filter: blur( 12.5px );
+    -webkit-backdrop-filter: blur( 12.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#game-des{
+    font-size: 18px;
+    line-height: 25px;
+}
+#highlight{
+    color: yellow;
+    font-weight: 900;
+}
+#choose-mode-heading{
+    font-size: 40px;
+    font-family: hemi;
+    text-decoration: underline;
+}
+#buttons{
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+}
+#buttons button{
+    font-size: 16px;
+    font-family: hemi;
+    width: 100px;
+    height: 50px;
+    background: rgba( 255, 255, 255, 0.05 );
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+    backdrop-filter: blur( 12.5px );
+    -webkit-backdrop-filter: blur( 12.5px );
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#startBtn button{
+    margin-top: 50px;
+    font-size: 16px;
+    font-family: hemi;
+    width: 100px;
+    height: 50px;
+    background: rgba( 255, 255, 255, 0.05 );
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+    backdrop-filter: blur( 12.5px );
+    -webkit-backdrop-filter: blur( 12.5px );
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 25px;
+}
+#score{
+    position: absolute;
+    align-items: center;
+    padding: 0 90px 0 90px;
+    gap: 30px;
+    top: 10%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 80%;
+    background: rgba( 255, 255, 255, 0.05 );
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+    backdrop-filter: blur( 12.5px );
+    -webkit-backdrop-filter: blur( 12.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    visibility: hidden;
+}
+#score-box{
+    font-size: 40px;
+    font-family: hemi;
 }
