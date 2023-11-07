@@ -30,6 +30,8 @@ playBtn.onclick = ()=>{
     location.reload()
 }
 startBtn.onclick = ()=>{
+    reactionTimeValueLocalStorage = 0
+    localStorage.setItem("min-time", 0)
     instructionsDiv.style.visibility = "hidden"
     arena.style.visibility = "visible"
     fullGameStart()
@@ -52,8 +54,6 @@ endBtn.onclick = ()=>{
 // bgm.play(
 
 function fullGameStart(){
-    reactionTimeValueLocalStorage = 0
-    localStorage.setItem("min-time", 0)
     clicks = 0
     text.textContent = "Click or Press Spacebar to Start"
     colorChangeArea.style.background = "rgba( 255, 255, 255, 0.7 )"
