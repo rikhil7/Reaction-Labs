@@ -112,8 +112,37 @@ function fullGame() {
           if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
             fullGame();
           }
+        body.onclick = ()=>{
+          fullGame()
+        }
         };
       }
     }
   };
+  body.onclick = ()=>{
+      clicks++;
+      carStop();
+      tooSoon();
+      if (tooSoonTimeTracker - gameStartTimer > timer * 1000) {
+        stopSign.style.visibility = "hidden";
+        reactTimer = Date.now();
+        reactionTimeBox.style.visibility = "visible";
+        console.log(`reactTimer: ${reactTimer}`);
+        value = reactTimer - stopSignTimeStart;
+        if (leastValue==0 || leastValue>value){
+            leastValue = value
+        }
+        averageArray.push(value)
+        reactionTimeBox.textContent = `Your Reaction Time: ${value}ms`;
+        console.log(reactTimer - stopSignTimeStart);
+        document.body.onkeydown = function (e) {
+          if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
+            fullGame();
+          }
+        }
+        body.onclick = ()=>{
+          fullGame()
+        }
+      }
+  }
 }
