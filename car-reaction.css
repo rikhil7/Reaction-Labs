@@ -310,6 +310,9 @@
     #scoreBox{
         font-size: 16px;
     }
+    #reaction-time-box{
+        font-size: 30px;
+    }
 }
 @media (min-width: 450px) and (max-width:750px){
     #heading{
@@ -361,6 +364,9 @@
     #scoreBox{
         font-size: 16px;
     }
+    #reaction-time-box{
+        font-size: 35px;
+    }
 }@media (min-width: 750px) and (max-width:1140px){
     #heading{
         font-size: 30px;
@@ -410,5 +416,8 @@
     }
     #scoreBox{
         font-size: 18px;
+    }
+    #reaction-time-box{
+        font-size: 40px;
     }
 }

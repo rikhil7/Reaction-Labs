@@ -112,14 +112,14 @@ function fullGame() {
           if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
             fullGame();
           }
-        body.onclick = ()=>{
+        car.onclick = ()=>{
           fullGame()
         }
         };
       }
     }
   };
-  body.onclick = ()=>{
+  car.onclick = ()=>{
       clicks++;
       carStop();
       tooSoon();
@@ -140,7 +140,7 @@ function fullGame() {
             fullGame();
           }
         }
-        body.onclick = ()=>{
+        car.onclick = ()=>{
           fullGame()
         }
       }
