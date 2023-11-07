@@ -9,25 +9,24 @@
     color: white;
 }
 body{
-    background-image: url(background\ image\ start\ page.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 #parent{
+    background: radial-gradient(circle, rgba(53,53,53,1) 0%, rgba(32,32,32,1) 40%);
+    /* background-color: rgb(32,32,32); */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    padding-top: 30vh;
-    padding-bottom: 50px;
-    justify-content: space-between;
+    /* padding-top: 50%; */
+    justify-content: center;
     height: 100vh;
     width: 100vw;
 }
 #heading{
-    position: relative;
-    left: -10vw;
+    /* margin-top: 40vh; */
+    z-index: 2;
     text-align: end;
     font-size: 80px;
     background: linear-gradient(90deg, #F9DEC9,#FFBA86,#FFBB5C, #FF9B50);
@@ -41,13 +40,6 @@ body{
     animation: gradient-heading 15s linear infinite alternate;
     
 }
-#heading img{
-    position: absolute;
-    top: -30.53vh;
-    left: 34.51vw;
-    opacity: 0.7;
-    transform: rotate(5deg);
-}
 @keyframes gradient-heading{
     0%{
         background-position: 0%;
@@ -56,18 +48,66 @@ body{
         background-position: 300%;
     }
 }
-#touch{
-    letter-spacing: 1px;
-    font-size: 16px;
-    word-spacing: 2px;
+#gun{
+    /* position: absolute; */
+    z-index: 0;
+    opacity: 0.4;
 }
-@media (max-width: 350px){
-    #heading{
-        font-size: 25px;
+#gun img{
+    height: 700px;
+    width: 500px;
+}
+#touch{
+    position: absolute;
+    bottom: 2%;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+@media (max-width:450px){
+    body{
+        overflow: hidden;
     }
-    #heading img{
-        width: 90px;
-        top: -53px;
-        left: 190px;
+    #heading{
+        font-size: 20px;
+    }
+    #gun img{
+        width: 150px;
+        height: 200px;
+    }
+    #touch{
+        font-size: 12px;
+        bottom: 5%;
+    }
+}
+@media (min-width:451px) and (max-width:700px){
+    body{
+        overflow: hidden;
+    }
+    #heading{
+        font-size: 30px;
+    }
+    #gun img{
+        width: 200px;
+        height: 300px;
+    }
+    #touch{
+        font-size: 12px;
+        bottom: 5%;
+    }
+}
+@media (min-width:701px) and (max-width:1100px){
+    body{
+        overflow: hidden;
+    }
+    #heading{
+        font-size: 50px;
+    }
+    #gun img{
+        width: 300px;
+        height: 450px;
+    }
+    #touch{
+        font-size: 12px;
+        bottom: 5%;
     }
 }

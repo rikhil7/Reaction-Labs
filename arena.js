@@ -4,6 +4,8 @@ let bgm = new Audio("choose-bgm.mp3")
 let colorTest = document.querySelector(".color-test")
 let pop = document.querySelector(".pop")
 let car = document.querySelector(".car")
+let username = document.querySelector("#username")
+username.textContent = localStorage.getItem("name")
 bgm.play()
 bgm.loop = true
 options.forEach((e)=>{

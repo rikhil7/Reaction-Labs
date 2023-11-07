@@ -195,3 +195,23 @@
         opacity: 1;
     }
 }
+#home{
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+.homeBtn{
+    background: rgba( 255, 255, 255, 0.05 );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.homeBtn:hover{
+    cursor: pointer;
+}
+
+.homeBtn2{
+    background: rgba( 255, 255, 255, 0.05 );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.homeBtn2:hover{
+    cursor: pointer;
+}

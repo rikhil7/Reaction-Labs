@@ -26,6 +26,11 @@ let sum = 0
 let averageValue
 let average = document.querySelector("#average")
 let playBtn = document.querySelector("#playBtn")
+let homeBtn = document.querySelector(".homeBtn")
+let homeBtn2 = document.querySelector(".homeBtn2")
+homeBtn2.onclick = ()=>{
+    window.location.href = "arena.html"
+}
 playBtn.onclick = ()=>{
     location.reload()
 }
@@ -50,27 +55,31 @@ endBtn.onclick = ()=>{
     console.log(averageValue)
     average.textContent = `${Math.round(averageValue*100)/100}ms`
 }
+homeBtn.onclick = ()=>{
+    console.log("hello")
+    window.location.href = "arena.html"
+}
 // let bgm = new Audio("full-screen-reaction-bg.mp3")
 // bgm.play(
-
-function fullGameStart(){
-    clicks = 0
-    text.textContent = "Click or Press Spacebar to Start"
-    colorChangeArea.style.background = "rgba( 255, 255, 255, 0.7 )"
-    reactTime.style.visibility = "hidden"
-    function startgame(){
-        if (clicks==1){
-            startGameTime = Date.now()
-            text.textContent = "Click as soon as color changes!"
-            randomTime = Math.ceil(Math.random()*3)+3
-            randomTimeMS = randomTime*1000
-            console.log(randomTimeMS)
-            // console.log(randomTime)
-            t1 = setTimeout(() => {
-                randomColor = Math.floor(Math.random()*16777215).toString(16)
-                colorChangeArea.style.backgroundColor = `#${randomColor}`
-                z = Date.now()
-                // console.log("changed")
+    
+    function fullGameStart(){
+        clicks = 0
+        text.textContent = "Click or Press Spacebar to Start"
+        colorChangeArea.style.background = "rgba( 255, 255, 255, 0.7 )"
+        reactTime.style.visibility = "hidden"
+        function startgame(){
+            if (clicks==1){
+                startGameTime = Date.now()
+                text.textContent = "Click as soon as color changes!"
+                randomTime = Math.ceil(Math.random()*3)+3
+                randomTimeMS = randomTime*1000
+                console.log(randomTimeMS)
+                // console.log(randomTime)
+                t1 = setTimeout(() => {
+                    randomColor = Math.floor(Math.random()*16777215).toString(16)
+                    colorChangeArea.style.backgroundColor = `#${randomColor}`
+                    z = Date.now()
+                    // console.log("changed")
             }, randomTime*1000);
         }
     }
@@ -86,12 +95,12 @@ function fullGameStart(){
             }
             document.body.onkeydown = function(e) {
                 if (e.key == " " ||
-                    e.code == "Space" ||      
+                e.code == "Space" ||      
                     e.keyCode == 32      
                 ) {
                     fullGameStart()
                 }
-              }
+            }
         }
     }
     
@@ -116,12 +125,12 @@ function fullGameStart(){
             }
             document.body.onkeydown = function(e) {
                 if (e.key == " " ||
-                    e.code == "Space" ||      
-                    e.keyCode == 32      
+                e.code == "Space" ||      
+                e.keyCode == 32      
                 ) {
                     fullGameStart()
                 }
-              }
+            }
         }
     }
     
@@ -141,7 +150,7 @@ function fullGameStart(){
                 text.textContent = "Your reaction time:"
                 reactionTimeValue = r-z
                 scoreArray.push(reactionTimeValue)
-
+                
                 if(reactionTimeValueLocalStorage==0 || reactionTimeValueLocalStorage>reactionTimeValue){
                     reactionTimeValueLocalStorage = reactionTimeValue
                 }
@@ -150,17 +159,17 @@ function fullGameStart(){
                 reactTime.style.visibility = "visible"
                 document.body.onkeydown = function(e) {
                     if (e.key == " " ||
-                        e.code == "Space" ||      
-                        e.keyCode == 32      
+                    e.code == "Space" ||      
+                    e.keyCode == 32      
                     ) {
                         fullGameStart()
                     }
                   }
                   colorChangeArea.onclick = ()=>{
-                    fullGameStart()
+                      fullGameStart()
+                    }
                 }
             }
         }
     }
-}
-// localStorage.clear()
+    // localStorage.clear()

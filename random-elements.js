@@ -29,18 +29,30 @@ let averageValue = document.querySelector("#averageValue")
 let sum = 0
 let average
 let difficultySelected
+let playAgain = document.querySelector("#playBtn")
+let resetBtn = document.querySelector(".resetBtn")
+let homeBtn = document.querySelector(".homeBtn")
+homeBtn.onclick = ()=>{
+    window.open("arena.html", "_self")
+}
+playAgain.onclick = ()=>{
+    location.reload()
+}
 // function difficultyParameters(difficulty){
     //     if (difficulty=="easy"){
         //         randomWidthHeight = `50`
-//     }
-//     if (difficulty=="medium"){
+        //     }
+        //     if (difficulty=="medium"){
 //         randomWidthHeight = Math.floor(Math.random()*50)+20
 //     }
 // }
 // hardBtn.onclick = ()=>{
-//     instructionsDiv.style.visibility = "hidden"
-//     parent.style.visibility = "visible"
+    //     instructionsDiv.style.visibility = "hidden"
+    //     parent.style.visibility = "visible"
 // }
+resetBtn.onclick = ()=>{
+    location.reload()
+}
 function gamePlay(difficulty){
     if(difficulty=="easy"){
         startReactionTime = Date.now()
