@@ -22,7 +22,13 @@ let time
 let timeInterval
 let scorePage = document.querySelector("#score")
 let score = 0
-let scoreBox = document.querySelector("#score-box")
+let scoreBox = document.querySelector("#score-value")
+let value
+let averageArray = []
+let averageValue = document.querySelector("#averageValue")
+let sum = 0
+let average
+let difficultySelected
 // function difficultyParameters(difficulty){
     //     if (difficulty=="easy"){
         //         randomWidthHeight = `50`
@@ -56,7 +62,9 @@ function gamePlay(difficulty){
             console.log(score)
             // localStorage.setItem("score", score)
             clickReactionTime = Date.now()
-            reactionTimeText.textContent = `${clickReactionTime-startReactionTime}ms`
+            value = clickReactionTime-startReactionTime
+            averageArray.push(value)
+            reactionTimeText.textContent = `${value}ms`
             gameArena.removeChild(circle)
             gamePlay("easy")
         }
@@ -81,7 +89,9 @@ function gamePlay(difficulty){
             score++
             // localStorage.setItem("score", score)
             clickReactionTime = Date.now()
-            reactionTimeText.textContent = `${clickReactionTime-startReactionTime}ms`
+            value = clickReactionTime-startReactionTime
+            averageArray.push(value)
+            reactionTimeText.textContent = `${value}ms`
             gameArena.removeChild(circle)
             gamePlay("medium")
         }
@@ -99,24 +109,26 @@ function timer(){
             console.log(score)
             scoreBox.textContent = score
             scorePage.style.visibility = "visible"
+            averageArray.forEach((e)=>{
+                sum=sum+e
+            })
+            console.log(sum)
+            average = (sum/averageArray.length)
+            averageValue.textContent = `${Math.round(average*100)/100}ms`
         }
     }, 1000);
-}
-function fullGameStart(){
-    gamePlay()
-    timer()
 }
 easyBtn.onclick = ()=>{
     easyBtn.style.background = "rgba( 255, 255, 255, 0.5 )"
     mediumBtn.style.visibility = "hidden"
     hardBtn.style.visibility = "hidden"
-    gamePlay("easy")
+    difficultySelected = "easy"
 }
 mediumBtn.onclick = ()=>{
     mediumBtn.style.background = "rgba( 255, 255, 255, 0.5 )"
     easyBtn.style.visibility = "hidden"
     hardBtn.style.visibility = "hidden"
-    gamePlay("medium")
+    difficultySelected = "medium"
 }
 btn10.onclick = ()=>{
     btn10.style.background = "rgba( 255, 255, 255, 0.5 )"
@@ -139,7 +151,8 @@ btn30.onclick = ()=>{
 startBtn.onclick = ()=>{
     instructionsDiv.style.visibility = "hidden"
     parent.style.visibility = "visible"
-    fullGameStart()
+    gamePlay(difficultySelected)
+    timer()
 }
 
 

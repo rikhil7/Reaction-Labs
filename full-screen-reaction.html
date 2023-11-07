@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="full-screen-reaction.css">
-</head>
-<body>
-    <div id="arena">
-        <div id="color-change-area">
-            <div id="reaction-time-box">
-                <span id="text">Click to Start</span><br> <span id="reaction-time">315ms</span>
-            </div>
+    <link rel="stylesheet" href="full-screen-reaction.css" />
+  </head>
+  <body>
+    <div id="parent">
+      <div id="instruction">
+        <div id="heading">INSTRUCTIONS</div>
+        <div id="instructions-text">
+          This game has been developed to test and improve your
+          <span id="highligh">reaction time</span> skills. <br />
+          A section will appear on your webpage and it will change color
+          randomly. You have to press <span id="highligh">Spacebar</span> as
+          soon as the color changes and your reaction time will then be
+          displayed on the scree. You can play this game as many times as you
+          want. You can press on the <span id="highligh">Enter Button</span> to
+          end the game. After you end the game, your lowest reaction time will
+          be displayed.
         </div>
+        <div id="ready">
+          <div id="heading">So, are you READY?</div>
+          <button id="button">Let's Go!</button>
+        </div>
+      </div>
+      <div id="arena">
+        <div id="endBtn">END</div>
+        <div id="heading">Color Change Reaction Test</div>
+        <div id="color-change-area">
+          <div id="reaction-time-box">
+            <span id="text">Click to Start</span><br />
+            <span id="reaction-time">315ms</span>
+          </div>
+        </div>
+      </div>
+      <div id="score">
+        <div id="heading">GAME END!</div>
+        <div id="score-text">
+          Thanks for playing the game! I hope you enjoyed playing it and your
+          Reaction Time & Reflexes have improved.
+        </div>
+        <div id="scoreBox">
+          Your Least Reaction Time: <span id="scoreValue"></span>
+        </div>
+        <div id="scoreBox">
+          Average Reaction Time: <span id="average"></span>
+        </div>
+        <div id="playBtn">Play Again</div>
+      </div>
     </div>
     <script src="full-screen-reaction.js"></script>
-</body>
+  </body>
 </html>

@@ -2,6 +2,10 @@
     font-family: hemi;
     src: url(hemi\ head\ bd\ it.otf);
 }
+@font-face {
+    font-family: contra;
+    src: url(ContrailOne-Regular.ttf);
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -140,7 +144,13 @@ body{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     visibility: hidden;
 }
+#score-text{
+    font-family: contra;
+    font-size: 18px;
+    line-height: 25px;
+}
 #score-box{
     font-size: 40px;
     font-family: hemi;
+    margin-top: 40px;
 }

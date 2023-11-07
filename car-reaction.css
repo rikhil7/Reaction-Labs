@@ -8,7 +8,14 @@
     font-family: hemi;
     src: url(hemi\ head\ bd\ it.otf);
 }
-
+@font-face {
+    font-family: contra;
+    src: url(ContrailOne-Regular.ttf);
+}
+@font-face {
+    font-family: dash;
+    src: url(Dashhorizon-eZ5wg.otf);
+}
 #sky{
     height: 100vh;
     width: 100%;
@@ -123,4 +130,133 @@
     font-family: hemi;
     visibility: hidden;
     z-index: 3;
+}
+#gameplay{
+    visibility: hidden;
+}
+#instructions{
+    background: rgba(30, 161, 255, 0.6);
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.7vh;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    /* line-height: 28px; */
+}
+#heading{
+    font-family: dash;
+    font-size: 60px;
+    text-decoration: underline;
+    /* -webkit-text-stroke: 1px black; */
+}
+#text{
+    font-family: contra;
+    font-size: 18px;
+    /* -webkit-text-stroke: 0.3px black; */
+}
+#highlight{
+    color: yellow;
+    font-weight: 500;
+    /* -webkit-text-stroke: 0.1px black; */
+}
+#button{
+    margin-top: 3vh;
+    font-size: 18px;
+    font-family: hemi;
+    font-weight: 900;
+    width: 190px;
+    height: 60px;
+    background: rgba( 255, 255, 255, 0.05 );
+    backdrop-filter: blur( 12.5px );
+    -webkit-backdrop-filter: blur( 12.5px );
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#button:hover{
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    color: yellow;
+
+}
+#button:active{
+    background-color: red;
+}
+#endBtn{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    width: 60px;
+    height: 60px;
+    font-family: hemi;
+    font-size: 16px;
+    background: rgba(20, 153, 194, 0.5);
+    backdrop-filter: blur( 12.5px );
+    -webkit-backdrop-filter: blur( 12.5px );
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#endBtn:hover{
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    color: yellow;
+
+}
+#endBtn:active{
+    background-color: red;
+}
+#scoreDiv{
+    background: rgba(30, 161, 255, 0.6);
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5vh;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    visibility: hidden;
+}
+#scoreBox{
+    margin-top: 4vh;
+    font-size: 35px;
+    font-family: hemi;
+}
+#again{
+    margin-top: 2vh;
+    font-size: 18px;
+    font-family: hemi;
+    font-weight: 900;
+    width: 190px;
+    height: 60px;
+    background: rgba( 255, 255, 255, 0.05 );
+    backdrop-filter: blur( 12.5px );
+    -webkit-backdrop-filter: blur( 12.5px );
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#again:hover{
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    color: yellow;
+}
+#again:active{
+    background-color: red;
 }
