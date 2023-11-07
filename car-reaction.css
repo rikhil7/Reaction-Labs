@@ -114,12 +114,12 @@
 #stop{
     position: absolute;
     /* top: 20%; */
-    left: 22%;
+    left: 30%;
     z-index: 3;
     visibility: hidden;
 }
 #stop img{
-    width: 800px;
+    width: 600px;
 }
 #reaction-time-box{
     position: absolute;
@@ -259,4 +259,156 @@
 }
 #again:active{
     background-color: red;
+}
+@media (max-width: 450px){
+    #heading{
+        font-size: 18px;
+    }
+    #text{
+        font-size: 12px;
+    }
+    #instructions{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #road{
+        height: 100px;
+    }
+    @keyframes road {
+        100%{
+            transform: translateX(-800px);
+        }
+    }
+    #buildings{
+        /* height: 200px; */
+        bottom: 100px;
+    }
+    #car{
+        width: 200px;
+        bottom: 50px;
+    }
+    #wheel{
+        bottom: 90px;
+    }
+    #wheel img{
+        width: 36px;
+        height: 36px;
+    }
+    .back{
+        left: -82.5px;
+    }
+    .front{
+        left: 40px;
+    }
+    #stop{
+        top: 20%;
+        left: 18%;
+    }
+    #stop img{
+        width: 300px;
+    }
+    #scoreBox{
+        font-size: 16px;
+    }
+}
+@media (min-width: 450px) and (max-width:750px){
+    #heading{
+        font-size: 22px;
+    }
+    #text{
+        font-size: 15px;
+    }
+    #instructions{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #road{
+        height: 100px;
+    }
+    @keyframes road {
+        100%{
+            transform: translateX(-800px);
+        }
+    }
+    #buildings{
+        /* height: 200px; */
+        bottom: 100px;
+    }
+    #car{
+        width: 200px;
+        bottom: 50px;
+    }
+    #wheel{
+        bottom: 90px;
+    }
+    #wheel img{
+        width: 36px;
+        height: 36px;
+    }
+    .back{
+        left: -82.5px;
+    }
+    .front{
+        left: 40px;
+    }
+    #stop{
+        top: 15%;
+        left: 10%;
+    }
+    #stop img{
+        width: 400px;
+    }
+    #scoreBox{
+        font-size: 16px;
+    }
+}@media (min-width: 750px) and (max-width:1140px){
+    #heading{
+        font-size: 30px;
+    }
+    #text{
+        font-size: 20px;
+    }
+    #instructions{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #road{
+        height: 100px;
+    }
+    @keyframes road {
+        100%{
+            transform: translateX(-800px);
+        }
+    }
+    #buildings{
+        /* height: 200px; */
+        bottom: 100px;
+    }
+    #car{
+        width: 200px;
+        bottom: 50px;
+    }
+    #wheel{
+        bottom: 90px;
+    }
+    #wheel img{
+        width: 36px;
+        height: 36px;
+    }
+    .back{
+        left: -82.5px;
+    }
+    .front{
+        left: 40px;
+    }
+    #stop{
+        top: 15%;
+        left: 25%;
+    }
+    #stop img{
+        width: 500px;
+    }
+    #scoreBox{
+        font-size: 18px;
+    }
 }

@@ -65,7 +65,7 @@ homeBtn.onclick = ()=>{
     function fullGameStart(){
         clicks = 0
         text.textContent = "Click or Press Spacebar to Start"
-        colorChangeArea.style.background = "rgba( 255, 255, 255, 0.7 )"
+        colorChangeArea.style.background = "rgba( 255, 255, 255, 0.4 )"
         reactTime.style.visibility = "hidden"
         function startgame(){
             if (clicks==1){

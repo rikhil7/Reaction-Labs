@@ -14,12 +14,13 @@
 }
 body{
     background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(45,50,173,1) 35%, rgba(0,212,255,1) 100%);
+    background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
 }
 #game-arena{
-    width: 1000px;
-    height: 500px;
+    width: 80%;
+    height: 70%;
     background: rgba( 255, 255, 255, 0.1 );
     /* box-shadow: 0 8px 32px 0 rgba( 255, 255, 255, 0.37 ); */
     backdrop-filter: blur( 20px );
@@ -55,7 +56,7 @@ body{
 #instructions{
     position: absolute;
     align-items: center;
-    padding: 0 90px 0 90px;
+    padding: 15px 20px 0 10px;
     gap: 30px;
     top: 10%;
     left: 10%;
@@ -128,7 +129,7 @@ body{
 #score{
     position: absolute;
     align-items: center;
-    padding: 0 90px 0 90px;
+    padding: 15px 20px 15px 10px;
     gap: 30px;
     top: 20%;
     left: 20%;
@@ -150,6 +151,7 @@ body{
     line-height: 25px;
 }
 #score-box{
+    text-align: center;
     font-size: 30px;
     font-family: hemi;
     /* margin-top: 30px; */
@@ -186,4 +188,145 @@ body{
 .resetBtn{
     background: rgba( 255, 255, 255, 0.05 );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+@media (max-width:450px){
+    body{
+        overflow: hidden;
+    }
+    #instructions{
+        gap: 18px;
+    }
+    #svg{
+        width: 12px;
+        height: 12px;
+    }
+    #heading{
+        font-size: 13px;
+    }
+    #game-des{
+        font-size: 11px;
+    }
+    #choose-mode-heading{
+        font-size: 15px;
+    }
+    #buttons button{
+        width: 40px;
+        height: 25px;
+        font-size: 8px;
+    }
+    #buttons{
+        width: 55%;
+    }
+    #timer{
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+    #reaction-time-box{
+        font-size: 12px;
+    }
+    #score-text{
+        font-size: 11px;
+    }
+    #score-box{
+        font-size: 14px;
+    }
+    #playBtn{
+        height: 30px;
+        font-size: 13px;
+    }
+}
+@media (min-width:450px) and (max-width:750px){
+    body{
+        overflow: hidden;
+    }
+    #instructions{
+        gap: 20px;
+    }
+    #svg{
+        width: 20px;
+        height: 20px;
+    }
+    #heading{
+        font-size: 18px;
+    }
+    #game-des{
+        font-size: 16px;
+    }
+    #choose-mode-heading{
+        font-size: 18px;
+    }
+    #buttons button{
+        width: 60px;
+        height: 30px;
+        font-size: 12px;
+    }
+    #buttons{
+        width: 60%;
+    }
+    #timer{
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+    #reaction-time-box{
+        font-size: 16px;
+    }
+    #score-text{
+        font-size: 15px;
+    }
+    #score-box{
+        font-size: 19px;
+    }
+    #playBtn{
+        height: 35px;
+        font-size: 16px;
+    }
+}
+@media (min-width:750px) and (max-width:1140px){
+    body{
+        overflow: hidden;
+    }
+    #instructions{
+        gap: 20px;
+    }
+    #svg{
+        width: 24px;
+        height: 24px;
+    }
+    #heading{
+        font-size: 25px;
+    }
+    #game-des{
+        font-size: 18px;
+    }
+    #choose-mode-heading{
+        font-size: 18px;
+    }
+    #buttons button{
+        width: 60px;
+        height: 30px;
+        font-size: 12px;
+    }
+    #buttons{
+        width: 40%;
+    }
+    #timer{
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+    #reaction-time-box{
+        font-size: 18px;
+    }
+    #score-text{
+        font-size: 18px;
+    }
+    #score-box{
+        font-size: 22px;
+    }
+    #playBtn{
+        height: 40px;
+        font-size: 18px;
+    }
 }

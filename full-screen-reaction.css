@@ -51,6 +51,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    /* gap: 50px; */
     align-items: center;
     height: 100vh;
     width: 100vw;
@@ -214,4 +215,160 @@
 }
 .homeBtn2:hover{
     cursor: pointer;
+}
+@media (max-width: 450px){
+    body{
+        overflow: hidden;
+    }
+    #instruction{
+        width: 90%;
+        height: 55%;
+        top: 22.5%;
+        left: 5%;
+        gap: 20px;
+    }
+    #button{
+        height: 20px;
+        font-size: 12px;
+        margin-top: 12px;
+    }
+    #heading{
+        font-size: 20px;
+    }
+    #instructions-text{
+        font-size: 12px;
+    }
+    #svg{
+        width: 15px;
+        height: 15px;
+    }
+    #reaction-time-box{
+        font-size: 25px;
+    }
+    #color-change-area{
+        height: 60%;
+        width: 80%;
+    }
+    #endBtn{
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    #score{
+        width: 90%;
+        height: 45%;
+        top: 22.5%;
+        left: 5%;
+        gap: 20px;
+    }
+    #score-text{
+        font-size: 12px;
+    }
+    #scoreBox{
+        font-size: 16px;
+    }
+    #homesvg{
+        width: 15px;
+        height: 15px;
+    }
+    #playBtn{
+        margin-top: 10px;
+        font-size: 13px;
+        height: 20px;
+    }
+
+}
+@media (min-width: 450px) and (max-width: 750px){
+    #instruction{
+        width: 90%;
+        height: 55%;
+        top: 22.5%;
+        left: 5%;
+        gap: 25px;
+    }
+    #button{
+        height: 30px;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+    #heading{
+        font-size: 24px;
+    }
+    #instructions-text{
+        font-size: 14px;
+    }
+    #svg{
+        width: 18px;
+        height: 18px;
+    }
+    #score{
+        width: 90%;
+        height: 45%;
+        top: 22.5%;
+        left: 5%;
+        gap: 20px;
+    }
+    #score-text{
+        font-size: 14px;
+    }
+    #scoreBox{
+        font-size: 18px;
+    }
+    #homesvg{
+        width: 15px;
+        height: 15px;
+    }
+    #playBtn{
+        margin-top: 22px;
+        font-size: 15px;
+        height: 27px;
+    }
+
+}
+@media (min-width: 750px) and (max-width: 1140px){
+    #instruction{
+        width: 80%;
+        height: 60%;
+        top: 20%;
+        left: 10%;
+        gap: 30px;
+    }
+    #button{
+        height: 40px;
+        font-size: 18px;
+        margin-top: 12px;
+    }
+    #heading{
+        font-size: 38px;
+    }
+    #instructions-text{
+        font-size: 18px;
+    }
+    #svg{
+        width: 22px;
+        height: 22px;
+    }
+    #score{
+        width: 90%;
+        height: 45%;
+        top: 22.5%;
+        left: 5%;
+        gap: 20px;
+    }
+    #score-text{
+        font-size: 16px;
+    }
+    #scoreBox{
+        font-size: 19px;
+    }
+    #homesvg{
+        width: 25px;
+        height: 25px;
+    }
+    #playBtn{
+        margin-top: 20px;
+        font-size: 18px;
+        height: 26px;
+    }
+
 }
