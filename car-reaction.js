@@ -88,7 +88,10 @@ function fullGame() {
         if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
           fullGame();
         }
-      };
+      }
+      car.onclick = ()=>{
+        fullGame()
+      }
     }
   }
   document.body.onkeydown = function (e) {
