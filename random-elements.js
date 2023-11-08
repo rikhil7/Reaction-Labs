@@ -103,8 +103,36 @@ function gamePlay(difficulty) {
       reactionTimeText.textContent = `${value}ms`;
       gameArena.removeChild(circle);
       gamePlay("medium");
-    };
-  }
+    }
+  } else if (difficulty=="hard"){
+    startReactionTime = Date.now();
+    console.log(startReactionTime);
+    randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    randomWidthHeight = Math.floor(Math.random() * 40) + 20;
+    // console.log(randomWidthHeight)
+    circle = document.createElement("div");
+    circle.setAttribute("id", "circle");
+    circle.style.width = `${randomWidthHeight}px`;
+    circle.style.height = `${randomWidthHeight}px`;
+    circle.style.backgroundColor = `#${randomColor}`;
+    circle.style.animation = "shake 0.1s linear infinite"
+    circleTopPosition = Math.floor(Math.random() * 70) + 2;
+    circleTopPosition2 = Math.floor(Math.random() * 72) + 2;
+    circle.style.top = `${circleTopPosition}%`;
+    circle.style.left = `${circleTopPosition2}%`;
+    gameArena.appendChild(circle);
+    circle.onclick = () => {
+      score++;
+      shootSound.play()
+      // localStorage.setItem("score", score)
+      clickReactionTime = Date.now();
+      value = clickReactionTime - startReactionTime;
+      averageArray.push(value);
+      reactionTimeText.textContent = `${value}ms`;
+      gameArena.removeChild(circle);
+      gamePlay("hard");
+    }
+  } 
 }
 
 // timer of the game (works according to time duration selected by the player)
@@ -141,6 +169,12 @@ mediumBtn.onclick = () => {
   easyBtn.style.visibility = "hidden";
   hardBtn.style.visibility = "hidden";
   difficultySelected = "medium";
+};
+hardBtn.onclick = () => {
+  hardBtn.style.background = "rgba( 255, 255, 255, 0.5 )";
+  easyBtn.style.visibility = "hidden";
+  mediumBtn.style.visibility = "hidden";
+  difficultySelected = "hard";
 };
 btn10.onclick = () => {
   btn10.style.background = "rgba( 255, 255, 255, 0.5 )";
