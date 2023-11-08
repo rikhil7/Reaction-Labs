@@ -1,10 +1,10 @@
 @font-face {
     font-family: hemi;
-    src: url(hemi\ head\ bd\ it.otf);
+    src: url(./assets/hemi\ head\ bd\ it.otf);
 }
 @font-face {
     font-family: contra;
-    src: url(ContrailOne-Regular.ttf);
+    src: url(./assets/ContrailOne-Regular.ttf);
 }
 *{
     margin: 0px;

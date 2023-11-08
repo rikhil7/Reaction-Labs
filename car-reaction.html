@@ -8,43 +8,56 @@
   </head>
   <body>
     <div id="sky">
+      <!-- instructions div (first page of game) -->
       <div id="instructions">
         <div id="heading">INSTRUCTIONS</div>
         <div id="text">
           This game has been developed to improve your patience and reaction
           time skills. <br />
           When you start the game, there will be a car running on the road and
-          randomly a <span id="highlight">stop sign</span> will appear on your screen. You have to press
-          <span id="highlight">Spacebar or click on the car</span> as sooon as that sign appears and
-          the game will then display your Reaction time. You can press spacebar
-          again to play again. You can play this game as many times as you want.
-          To end the game, just click on the <span id="highlight">END</span> and
-          your stats will be displayed.
+          randomly a <span id="highlight">stop sign</span> will appear on your
+          screen. You have to press
+          <span id="highlight">Spacebar or click on the car</span> as sooon as
+          that sign appears and the game will then display your Reaction time.
+          You can press spacebar again to play again. You can play this game as
+          many times as you want. To end the game, just click on the
+          <span id="highlight">END</span> and your stats will be displayed.
         </div>
         <div id="heading">So, are you ready for the Journey?</div>
         <button id="button">Let's get Braking!</button>
       </div>
+
+      <!-- main game play area, appears when player has clicked the start button instructions div -->
       <div id="gameplay">
         <div id="road"></div>
         <div id="buildings"></div>
         <div id="car">
-          <img src="car.png" alt="" />
+          <img src="./assets/car.png" alt="" />
         </div>
         <div id="wheel">
-          <img src="wheel.png" alt="" class="back" />
-          <img src="wheel.png" alt="" class="front" />
+          <img src="./assets/wheel.png" alt="" class="back" />
+          <img src="./assets/wheel.png" alt="" class="front" />
         </div>
         <div id="stop">
-          <img src="stop.png" alt="" />
+          <img src="./assets/stop.png" alt="" />
         </div>
         <div id="reaction-time-box">Your Reaction Time:</div>
         <button id="endBtn">END</button>
       </div>
+
+      <!-- displays your score and stats, appears when player clicks on end button in the game play area -->
       <div id="scoreDiv">
         <div id="heading">GAME END!</div>
-        <div id="text">Thanks for playing this game. I hope you enoyed the game. Keep playing to keep enhancing your patience and reflexes.</div>
-        <div id="scoreBox">Your Least Reaction Time: <span id="least"></span></div>
-        <div id="scoreBox">Your Average Reaction Time: <span id="average"></span></div>
+        <div id="text">
+          Thanks for playing this game. I hope you enoyed the game. Keep playing
+          to keep enhancing your patience and reflexes.
+        </div>
+        <div id="scoreBox">
+          Your Least Reaction Time: <span id="least"></span>
+        </div>
+        <div id="scoreBox">
+          Your Average Reaction Time: <span id="average"></span>
+        </div>
         <button id="again">Play Again</button>
       </div>
     </div>

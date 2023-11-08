@@ -1,10 +1,10 @@
 @font-face {
     font-family: contrail;
-    src: url(ContrailOne-Regular.ttf);
+    src: url(./assets/ContrailOne-Regular.ttf);
 }
 @font-face {
     font-family: hemi;
-    src: url(hemi\ head\ bd\ it.otf);
+    src: url(./assets/hemi\ head\ bd\ it.otf);
 }
 *{
     margin: 0px;
@@ -183,7 +183,7 @@ body{
     text-align: center;
     font-family: hemi;
     font-size: 40px;
-    background-image: url(sky.jpg);
+    background-image: url(./assets/sky.jpg);
     background-size: cover;
 }
 #road{
